@@ -1,0 +1,9 @@
+<article class="blog-post">
+<% @category.each do |category| %>
+<ul>
+    <li><%= category.name%></li>
+</ul>
+
+   <%end%>
+    <p><%= link_to 'Back', 'categories/new', class: 'btn btn-primary' %></p>
+</article>

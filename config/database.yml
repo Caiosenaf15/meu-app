@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # Conectamos ao host 'db', que é o nome do serviço no docker-compose.yml
+  host: db
+  username: caio
+  password: 2543
+  pool: 5
+
+development:
+  <<: *default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test

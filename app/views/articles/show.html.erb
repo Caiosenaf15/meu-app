@@ -1,0 +1,11 @@
+<article class="blog-post">
+    <h2 class="blog-post-title"><%= @article.title%></h2>
+    <p class="blog-post-meta"><%= month_day_year(@article.created_at) %> by <a href="#">Chris</a></p>
+    
+    <p><%= @article.body%></p>
+
+    <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-secondary' %>
+    
+    <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <p><%= link_to 'Back to Articles', articles_path, class: 'btn btn-primary' %></p>
+</article>
