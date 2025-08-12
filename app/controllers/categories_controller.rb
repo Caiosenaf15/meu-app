@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
-
+  before_action :set_category, only: %i[ show edit update destroy ]
   # GET /articles or /articles.json
   def index 
-    @category = Category.all
+    @category = Category.sorted
   end
 
   # GET /articles/1 or /articles/1.json

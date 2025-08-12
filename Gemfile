@@ -17,6 +17,10 @@ gem 'sassc-rails'
 gem 'kaminari'
 
 gem 'simple_form'
+
+gem 'devise'
+
+gem 'letter_opener'
 # Gemfile
 gem 'bootstrap', '~> 5.3'
 # Use the Puma web server [https://github.com/puma/puma]
