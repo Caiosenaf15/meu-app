@@ -20,9 +20,14 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'letter_opener'
+gem 'letter_opener_web', group: :development
 # Gemfile
-gem 'bootstrap', '~> 5.3'
+# Gemfile
+gem "jsbundling-rails"
+
+gem "popper_js"
+
+gem "bootstrap"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 

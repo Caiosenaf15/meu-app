@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     
@@ -17,7 +17,7 @@
     <%= render 'layouts/topnavbar' %>
 
     <main class="container">
-     
+     <%= render 'layouts/flash_messages' %>
 
       <%= yield %>
     </main>

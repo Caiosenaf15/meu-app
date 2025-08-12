@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :testes
   resources :articles
   resources :categories
@@ -16,4 +17,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # config/routes.rb
+
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end
