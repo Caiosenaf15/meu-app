@@ -22,12 +22,18 @@ gem 'devise'
 
 gem 'letter_opener_web', group: :development
 # Gemfile
+gem 'bullet', group: :development
+
+gem 'groupdate'
+
 # Gemfile
 gem "jsbundling-rails"
 
 gem "popper_js"
 
 gem "bootstrap"
+
+gem "pundit"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -42,6 +48,7 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
 
 # Use Redis adapter to run Action Cable in productionj
 # gem "redis", ">= 4.0.1"

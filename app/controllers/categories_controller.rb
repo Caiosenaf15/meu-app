@@ -1,8 +1,10 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_category, only: %i[ show edit update destroy ]
+  
   # GET /articles or /articles.json
   def index 
-    @category = Category.sorted
+    @category = policy_scope(Category.sorted)
   end
 
   # GET /articles/1 or /articles/1.json
@@ -12,6 +14,7 @@ class CategoriesController < ApplicationController
   # GET /articles/new
   def new
     @category = Category.new
+    authorize @category
   end
 
   # GET /articles/1/edit
@@ -21,6 +24,7 @@ class CategoriesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @category = Category.new(category_params)
+    authorize @category
 
     respond_to do |format|
       if @category.save

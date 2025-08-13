@@ -90,6 +90,9 @@ GEM
     bootstrap (5.3.5)
       popper_js (>= 2.11.8, < 3)
     builder (3.3.0)
+    bullet (8.0.8)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     capybara (3.40.0)
       addressable
       matrix
@@ -120,6 +123,8 @@ GEM
     ffi (1.17.2-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    groupdate (6.7.0)
+      activesupport (>= 7.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.2.2)
@@ -198,6 +203,8 @@ GEM
     public_suffix (6.0.2)
     puma (6.6.1)
       nio4r (~> 2.0)
+    pundit (2.5.0)
+      activesupport (>= 3.0.0)
     racc (1.8.1)
     rack (3.2.0)
     rack-session (2.1.1)
@@ -285,6 +292,7 @@ GEM
       railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uniform_notifier (1.17.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -307,9 +315,11 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap
+  bullet
   capybara
   debug
   devise
+  groupdate
   importmap-rails
   jbuilder
   jsbundling-rails
@@ -318,6 +328,7 @@ DEPENDENCIES
   pg (~> 1.1)
   popper_js
   puma (>= 5.0)
+  pundit
   rails (~> 7.1.5, >= 7.1.5.1)
   sassc-rails
   selenium-webdriver

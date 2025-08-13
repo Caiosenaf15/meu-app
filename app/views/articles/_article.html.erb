@@ -1,12 +1,14 @@
 <article class="blog-post">
     <h2 class="blog-post-title"><%= article.title%></h2>
-    <p class="blog-post-meta"><%= month_day_year(article.created_at) %> by <%= article.user.email%></p>
+    <p class="blog-post-meta">
+        <%= render 'article_details', article: article %>
+    </p>
     
     <p class = 'text-break'><%= truncate(article.body, length: 150) %></p>
     <p><%= link_to 'Continue reading ...', article_path(article)%></p>
 
-    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-secondary' %>
+    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-secondary' if policy(article).update?%>
     
-    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if policy(article).destroy? %>
 
 </article>
